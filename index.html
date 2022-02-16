@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Meme Generator</title>
 </head>
-<body>
+<body onload="init()">
     <header class="header">
         <div class="logo">Meme Generator</div>
         <nav >
@@ -28,7 +28,7 @@
             <span id="politics">Politics</span>
         </div>
         <div class="img-gallery">
-
+            
         </div>
     </div>
     <div class="meme-generator">
@@ -39,8 +39,11 @@
 
         </canvas>
     </div>
-    <footer class="footer">
-
+    <footer class="footer align-center">
+        <span class="coprights">Made By Guy Buganim</span>
     </footer>
 </body>
+<script src="/service/gallery-service.js"></script>
+<script src="./controller/gallery-controller.js"></script>
+<script src="./controller/meme-controller.js"></script>
 </html>

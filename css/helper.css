@@ -20,3 +20,9 @@ li:hover {
     color: #fff;
 
 }
+
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
