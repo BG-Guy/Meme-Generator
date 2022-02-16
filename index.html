@@ -40,7 +40,7 @@
         </div>
         <div class="meme-controller">
             <div class="line-controller">
-                <input type="text" placeholder="Enter Text">
+                <input type="text" id="add-line" placeholder="Enter Text">
                 <img class="icon" src="./ICONS/add.png" alt="">
                 <img class="icon" src="./ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
                 <img class="icon" src="./ICONS/trash.png" alt="">
@@ -51,7 +51,7 @@
                 <i><img class="icon" src="/ICONS/align-to-left.png" alt=""></i>
                 <i><img class="icon" src="/ICONS/center-text-alignment.png" alt=""></i>
                 <i><img class="icon" src="/ICONS/align-to-right.png" alt=""></i>
-                <select name="" id="">
+                <select onchange="onSetFont(this.value)" id="set-font" name="" id="">
                     <option value="impact">Impact</option>
                     <option value="arial">Arial</option>
                     <option value="ubunuto">Ubunuto</option>

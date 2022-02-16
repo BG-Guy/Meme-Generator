@@ -2,19 +2,23 @@
 
 var gKeywordSearchCountMap = {'funny': 12,'cat': 16, 'baby': 2}
 
-var gMeme = {
-    selectedImgId: 5,
-    selectedLineIdx: 0,
-    lines: [ {
-    txt: 'I sometimes eat Falafel', 
-    size: 20,
-    align: 'left',
-    color: 'red'
-    }]
-}
 var gElGallery = document.querySelector('.gallery')
 var gElCanvas
 var gCtx
+
+var gMeme = {
+    selectedImgId: 0,
+    selectedLineIdx: 0,
+    lines: [ {
+        txt: 'I sometimes eat Falafel', 
+        size: 20,
+        align: 'left',
+        color: 'red',
+        strokeColor: 'black',
+        yCoord: 50,
+        xCoord: 50
+    }]
+}
 
 function renderMeme(elImg) {
     gElGallery.classList.add('hide')
