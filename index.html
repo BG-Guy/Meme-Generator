@@ -40,8 +40,8 @@
         </div>
         <div class="meme-controller">
             <div class="line-controller">
-                <input type="text" id="add-line" placeholder="Enter Text">
-                <img class="icon" src="./ICONS/add.png" alt="">
+                <input onchange="onAddLine(this)" type="text" id="add-line" placeholder="Enter Text">
+                <img class="icon addBtn" src="./ICONS/add.png" alt="">
                 <img class="icon" src="./ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
                 <img class="icon" src="./ICONS/trash.png" alt="">
             </div>
@@ -57,7 +57,10 @@
                     <option value="ubunuto">Ubunuto</option>
                 </select>
                 <i><img class="icon" src="/ICONS/text stroke.png" alt=""></i>
-                <i><img class="icon" src="/ICONS/paint-board-and-brush.png" alt=""></i>
+                <label for="create-color">
+                    <input onchange="onSetColor(this.value)" type="color" id="create-color" style="visibility: hidden; width: 0px;">
+                    <i><img class="icon" src="/ICONS/paint-board-and-brush.png" alt=""></i>
+                </label>
             </div>
             <div class="stickers">
                 <i>s</i>
@@ -72,6 +75,7 @@
         <span class="coprights">Made By Guy Buganim</span>
     </footer>
 </body>
+<script src="./utils.js"></script>
 <script src="/service/gallery-service.js"></script>
 <script src="./service/meme-service.js"></script>
 <script src="./controller/gallery-controller.js"></script>
