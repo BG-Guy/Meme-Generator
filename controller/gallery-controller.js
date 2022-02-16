@@ -6,11 +6,13 @@ function init() {
 
 function renderImgs() {
     var imgs = getImgs()
+    console.log(imgs);
     var strHtmls = imgs.map((img) => {
         return `
-        <div onclick="select-img" class="img-preview">
-            <img height = "200" width = "200" src="${img.url}" alt="img ${img.id}">
-        </div>
+        
+            <img onclick="renderMeme(this)" class="img-preview" 
+            height = "200" width = "200" id="img-${img.id}" src="${img.url}" alt="img ${img.id}">
+        
         `
     })
     document.querySelector('.img-gallery').innerHTML = strHtmls.join('')

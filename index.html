@@ -32,18 +32,48 @@
         </div>
     </div>
     <div class="meme-generator">
-        <div class="meme-controller">
+        <div class="canvas">
+            <canvas width="400" height="400" id="meme-canvas">
     
-        </div>
-        <canvas id="meme-canvas">
+            </canvas>
 
-        </canvas>
+        </div>
+        <div class="meme-controller">
+            <div class="line-controller">
+                <input type="text" placeholder="Enter Text">
+                <img class="icon" src="./ICONS/add.png" alt="">
+                <img class="icon" src="./ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
+                <img class="icon" src="./ICONS/trash.png" alt="">
+            </div>
+            <div class="line-editor">
+                <i><img class="icon" src="/ICONS/increase font - icon.png" alt=""></i>
+                <i><img class="icon" src="/ICONS/decrease font - icon.png" alt=""></i>
+                <i><img class="icon" src="/ICONS/align-to-left.png" alt=""></i>
+                <i><img class="icon" src="/ICONS/center-text-alignment.png" alt=""></i>
+                <i><img class="icon" src="/ICONS/align-to-right.png" alt=""></i>
+                <select name="" id="">
+                    <option value="impact">Impact</option>
+                    <option value="arial">Arial</option>
+                    <option value="ubunuto">Ubunuto</option>
+                </select>
+                <i><img class="icon" src="/ICONS/text stroke.png" alt=""></i>
+                <i><img class="icon" src="/ICONS/paint-board-and-brush.png" alt=""></i>
+            </div>
+            <div class="stickers">
+                <i>s</i>
+                <i>s</i>
+                <i>s</i>
+            </div>
+            <button class="shareBtn" >Share</button>
+
+        </div>
     </div>
     <footer class="footer align-center">
         <span class="coprights">Made By Guy Buganim</span>
     </footer>
 </body>
 <script src="/service/gallery-service.js"></script>
+<script src="./service/meme-service.js"></script>
 <script src="./controller/gallery-controller.js"></script>
 <script src="./controller/meme-controller.js"></script>
 </html>

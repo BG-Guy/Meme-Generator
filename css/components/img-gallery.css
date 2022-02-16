@@ -26,5 +26,14 @@
 
 .img-gallery>* {
     margin-bottom: 3rem;
+    border-radius: 10px;    
+}
+
+.img-gallery>*:hover {
+    cursor: pointer;
+}
+
+img {
+    border-radius: 10px;
     
 }
