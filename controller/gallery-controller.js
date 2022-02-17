@@ -10,7 +10,7 @@ function renderImgs() {
         return `
         
             <img onclick="getImg(this)" class="img-preview" 
-            height = "200" width = "200" id="img-${img.id}" src="${img.url}" alt="img ${img.id}">
+            height = "300" width = "300" id="img-${img.id}" src="${img.url}" alt="img ${img.id}">
         
         `
     })
@@ -20,6 +20,12 @@ function renderImgs() {
 function getImg(el) {
     gCurrImgEl = el
     gElGallery.classList.add('hide')
+    gElMemeGenerator.classList.remove('hide')
 
     renderMeme()
+}
+
+function showGallery() {
+    gElMemeGenerator.classList.add('hide')
+    gElGallery.classList.remove('hide')
 }
