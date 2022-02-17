@@ -1,62 +1,67 @@
 'use strict'
 
-const gElAddInputLine = document.querySelector('#add-line')
+const gElLineInput = document.querySelector('#text-line')
 const gElSelectFontInput = document.querySelector('#set-font')
 
+var gCurrImgEl
 var gElGallery = document.querySelector('.gallery')
 var gElCanvas
 var gCtx
 
 
-function renderMeme(gCurrImgEl) {
-    gElGallery.classList.add('hide')
+function renderMeme() {
+    
     gElCanvas = document.querySelector('#meme-canvas')
     gCtx = gElCanvas.getContext('2d')
-    getMeme(gCurrImgEl)
+    gCtx.drawImage(gCurrImgEl, 0, 0, gElCanvas.width, gElCanvas.height);
+
+    getMeme()
 }
 
+function onEditLine(txt) {
+    setLineTxt(txt)
+    gElLineInput.value = ''
 
+}
 
-function onAddLine(elTxt) {
-    console.log(elTxt);
-    setLineTxt(elTxt.value)
-    elTxt.value = ''
+function onAddLine() {
+    if (!gElLineInput.value.trim()) return
+    var line = createLine(gElLineInput.value)
+    gMeme.lines.push(line)
+    renderMeme()
+    gElLineInput.value = ''
 }
 
 function onSetFont(font) {
-    console.log(font);
+    setFont(font)
+    gElSelectFontInput.value = ''
 }
 
 function onSwitchLines() {
-
+    gMeme.selectedLineIdx
+    if (gMeme.selectedLineIdx === gMeme.lines.length - 1) gMeme.selectedLineIdx = -1
+    gMeme.selectedLineIdx++
+    console.log(gMeme.selectedLineIdx)
+    
 }
 
-function onSetColor(color) {
-    var fontColor = color
-    return fontColor
+function onSetColor(color) {    
+    setColor(color)
 }
 
 function onIncFont() {
-    var inc = 0.3125
-    return inc
+    var inc = 0.6125
+    setFont(inc)
 
 }
 
 function onDecFont() {
-    var dec = 0.3125
-    return dec
+    var dec = -0.6125
+    setFont(dec)
 }
 
-function onAlignTextLeft() {
-
-}
-
-function onAlignTextToRight() {
-
-}
-
-function onAlignTextToCenter() {
-
+function onAlignText(position) {
+    setAlignText(position)
 }
 
 function onShare() {

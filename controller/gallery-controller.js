@@ -19,6 +19,7 @@ function renderImgs() {
 
 function getImg(el) {
     gCurrImgEl = el
-    console.log(gCurrImgEl);
+    gElGallery.classList.add('hide')
+
     renderMeme()
 }
