@@ -20,7 +20,7 @@ canvas {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;   
+    width: 30vw   
 }
 
 .hide {
@@ -31,7 +31,6 @@ canvas {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
 
 }
 
