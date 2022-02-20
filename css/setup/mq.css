@@ -34,10 +34,7 @@
     .meme-generator {
         width: 100vw;
         height: 120vh;
-        
         flex-wrap: wrap;
-        
-        
     }
 
     .main-nav.clean-list {
