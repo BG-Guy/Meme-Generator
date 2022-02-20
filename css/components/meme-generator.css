@@ -1,6 +1,6 @@
 canvas {
-   height: 27.6rem;
-   width: 27.75rem;
+   height: 60vh;
+   width: 60vh;
     
 }
 
@@ -9,10 +9,7 @@ canvas {
     height: 60vh;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    
-    
-
+    justify-content: space-around;
     
 }
 
@@ -55,6 +52,7 @@ canvas {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .line-editor>* {
@@ -73,21 +71,47 @@ canvas {
 .stickers {
     
     padding: 1rem;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .icon {
     height: 3.1875rem;
     width: 3.1875rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
+    border: none;
     background-color: var(--sec-clr);
-    padding: 4px;
+    padding: 0.25rem;
+    font-size: 1.2rem;
 }
 
 .icon:hover {
     cursor: pointer;
 }
 
+.save-btn {
+    width: 3.1875rem;
+    height: 3.1875rem;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: var(--sec-clr);
+    font-size: 2rem;
+
+}
+
 .share-btn {
+    margin-bottom: 1rem;
+}
+
+.edit-btn {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+
+}
+
+.save-and-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
     margin-bottom: 1rem;
 }

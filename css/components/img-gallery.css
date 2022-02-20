@@ -12,7 +12,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: ubuntu;
     height: 20vh;
     width: 100%;
@@ -22,7 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
+    align-items: center;
     
 
 }
@@ -30,7 +30,7 @@
 
 
 .img-gallery>* {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border-radius: 0.625rem; 
     transition: .3s;
     
@@ -41,10 +41,12 @@
     height: 380px;
     width: 380px;
     transition: all .3s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
     
 }
 
-img {
+.img-gallery img {
     border-radius: 0.625rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }

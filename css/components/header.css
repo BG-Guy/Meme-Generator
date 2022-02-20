@@ -14,8 +14,17 @@
 
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
     width: 50vw;
-    height: 100%;
+}
+
+li {
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
