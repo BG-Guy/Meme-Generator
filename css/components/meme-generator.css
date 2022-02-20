@@ -116,3 +116,15 @@ canvas {
     width: 100%;
     margin-bottom: 1rem;
 }
+
+.download-btn {
+    width: 5rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #000;
+    border-radius: .5rem;
+    background-color: var(--sec-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

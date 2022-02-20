@@ -137,3 +137,29 @@ function setDragMode(str) {
     gDragMode = str
     return gDragMode
 }
+
+
+function downloadImg(elLink) {
+    var imgContent = gElCanvas.toDataURL('image/jpeg')
+    elLink.href = imgContent
+}
+
+function markLine(line) {
+    let lineWidth = gCtx.measureText(line.txt).width + 30
+        let lineStartCoordX = line.xCoord - lineWidth/2
+        let lineEndCoordX = line.xCoord + lineWidth/2 
+        let lineEndCoordY = line.yCoord + line.size
+        let lineStartCoordY = line.yCoord - line.size
+}
+
+function getLineCornersCoords(line) {
+    let lineWidth = gCtx.measureText(line.txt).width + 30
+        
+        let cornerCoords = {
+            lineStartCoordX: line.xCoord - lineWidth/2,
+            lineEndCoordX: line.xCoord + lineWidth/2 ,
+            lineEndCoordY: line.yCoord + line.size,
+            lineStartCoordY: line.yCoord - line.size,
+        }
+        return cornerCoords
+}

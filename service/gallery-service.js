@@ -1,4 +1,6 @@
 const gKeywords = ['funny', 'women', 'men', 'animals', 'politics']
+var gKeywordSearchCountMap = {funny: 12,women: 16, men: 2, animals: 4, politics: 2}
+
 var gImgs
 var gFilterBy = ''
 _createImgs()
@@ -10,6 +12,7 @@ function getImgs() {
 
     if (gKeywords.includes(gFilterBy)) {
         imgs = gImgs.filter((img) => img.keywords.includes(gFilterBy))
+        gKeywordSearchCountMap.gFilterBy += 1
         return imgs
     }
     else {
