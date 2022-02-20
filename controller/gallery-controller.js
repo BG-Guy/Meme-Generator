@@ -10,7 +10,7 @@ function init() {
 
 function renderImgs() {
     var imgs = getImgs()
-    gImgs = imgs
+    
     var strHtmls = imgs.map((img) => {
         return `
         

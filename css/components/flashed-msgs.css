@@ -1,0 +1,30 @@
+/* .share-container {
+    width: 18.75rem;
+    height: 12.5rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transform: translate(-150%, 50%);
+    opacity: 0;
+}
+
+.flash-msg {
+    width: 12.5rem;
+    height: 9.375rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transform: translate(-150%, 50%);
+    opacity: 0;
+    font-size: 1rem;
+
+}
+
+.show {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+} */

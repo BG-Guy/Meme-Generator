@@ -15,6 +15,18 @@ function makeId(length = 6) {
     return txt;
 }
 
+// ELEMENTS
+const gElLineInput = document.querySelector('#text-line')
+const gElSelectFontInput = document.querySelector('#set-font')
+const gElMemeGenerator = document.querySelector('.meme-generator')
+const gElGallery = document.querySelector('.gallery')
+const gElMemeGalleryContainer = document.querySelector('.meme-gallery')
+const elMenu = document.querySelector('.menu')
+const elNavLinks = document.querySelector('.nav-links')
+const elLinks = document.querySelectorAll('.nav-links li')
+const gElTags = document.querySelectorAll('.tag')
+
+
 
 //EVENT LISTENERS
 
@@ -28,17 +40,22 @@ elSearchInput.addEventListener('keyup', function() {
     setFilter(elSearchInput.value)
 })
 
+elMenu.addEventListener('click', () => {
+    elNavLinks.classList.toggle('open')
+})
+
+elLinks.forEach((link) => {
+
+link.addEventListener('click', () => {
+    elNavLinks.classList.toggle('open')
+})
+})
 
 
-// ELEMENTS
-const gElLineInput = document.querySelector('#text-line')
-const gElSelectFontInput = document.querySelector('#set-font')
-const gElMemeGenerator = document.querySelector('.meme-generator')
-const gElGallery = document.querySelector('.gallery')
-const gElMemeGalleryContainer = document.querySelector('.meme-gallery')
-const elMenu = document.querySelector('.menu')
-const elNavLinks = document.querySelector('.nav-links')
-const elLinks = document.querySelectorAll('.nav-links li')
+
+
+
+
 
 
 // ANIMATIONS
@@ -54,16 +71,7 @@ function expandSearchBar() {
 }
 
 
-    elMenu.addEventListener('click', () => {
-        elNavLinks.classList.toggle('open')
-    })
 
-    elLinks.forEach((link) => {
-
-    link.addEventListener('click', () => {
-        elNavLinks.classList.toggle('open')
-    })
-})
 
 
 

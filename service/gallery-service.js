@@ -63,3 +63,10 @@ function _createImgs() {
         console.log(gFilterBy);
         renderImgs()
     }
+
+    gElTags.forEach((tag) => {
+        tag.addEventListener('click', function () {
+            setFilter(tag.innerHTML)
+            elSearchInput.value = tag.innerHTML
+        })
+    })

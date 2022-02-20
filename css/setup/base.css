@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-size: 0.845rem;
-    background-color: #F8F9F9;
+    background-color: var(--clr3);
 }
 
 a {
