@@ -12,7 +12,8 @@ function getImgs() {
 
     if (gKeywords.includes(gFilterBy)) {
         imgs = gImgs.filter((img) => img.keywords.includes(gFilterBy))
-        gKeywordSearchCountMap.gFilterBy += 1
+        gKeywordSearchCountMap[gFilterBy] += 1
+        updateTagsSize()
         return imgs
     }
     else {
@@ -63,15 +64,15 @@ function _createImgs() {
     function setFilter(value) {
 
         gFilterBy = value.toLowerCase()
-        console.log(gFilterBy);
         renderImgs()
     }
 
     gElTags.forEach((tagEl) => {
         tagEl.addEventListener('click', function () {
-            setFilter(tagEl.innerHTML)
-            elSearchInput.value = tagEl.innerHTML.toLowerCase()
-            let keyword = tagEl.innerHTML.toLowerCase()
+            let tagVal = tagEl.innerHTML.toLowerCase()
+            setFilter(tagVal)
+            elSearchInput.value = tagVal
+            let keyword = tagVal
             gKeywordSearchCountMap[keyword]++            
             updateTagsSize()
         })
@@ -81,7 +82,14 @@ function _createImgs() {
         gElTags.forEach((tagEl) => {
             let tag = tagEl.innerHTML.toLowerCase()
             
-                tagEl.style.fontSize = `${gKeywordSearchCountMap[tag] * 4}px` 
+                tagEl.style.fontSize = `${gKeywordSearchCountMap[tag] * 4}px`
+                
+                if (tag === gFilterBy.toLowerCase()) {
+                    tagEl.style.color = '#F7DC6F'
+                    setTimeout(function () {
+                        tagEl.style.color = '#333'
+                    },300)
+                }
                 console.log('hi')
 
         })
