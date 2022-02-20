@@ -152,14 +152,7 @@ function markLine(line) {
         let lineStartCoordY = line.yCoord - line.size
 }
 
-function getLineCornersCoords(line) {
-    let lineWidth = gCtx.measureText(line.txt).width + 30
-        
-        let cornerCoords = {
-            lineStartCoordX: line.xCoord - lineWidth/2,
-            lineEndCoordX: line.xCoord + lineWidth/2 ,
-            lineEndCoordY: line.yCoord + line.size,
-            lineStartCoordY: line.yCoord - line.size,
-        }
-        return cornerCoords
+
+function onRemoveLine() {
+    removeLine()
 }

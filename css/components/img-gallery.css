@@ -23,6 +23,11 @@
     color: var(--main-clr);
 }
 
+.tag {
+    transition: all .3s;
+    user-select: none;
+
+}
 
 
 .img-gallery {

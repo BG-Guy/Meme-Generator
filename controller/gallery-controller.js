@@ -5,6 +5,8 @@ var gImgs
 
 function init() {
     renderImgs()
+    updateTagsSize()
+
     
 }
 

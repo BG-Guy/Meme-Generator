@@ -1,5 +1,5 @@
 const gKeywords = ['funny', 'women', 'men', 'animals', 'politics']
-var gKeywordSearchCountMap = {funny: 12,women: 16, men: 2, animals: 4, politics: 2}
+var gKeywordSearchCountMap = {funny: 8,women: 7, men: 6, animals: 8, politics: 7}
 
 var gImgs
 var gFilterBy = ''
@@ -67,9 +67,22 @@ function _createImgs() {
         renderImgs()
     }
 
-    gElTags.forEach((tag) => {
-        tag.addEventListener('click', function () {
-            setFilter(tag.innerHTML)
-            elSearchInput.value = tag.innerHTML
+    gElTags.forEach((tagEl) => {
+        tagEl.addEventListener('click', function () {
+            setFilter(tagEl.innerHTML)
+            elSearchInput.value = tagEl.innerHTML.toLowerCase()
+            let keyword = tagEl.innerHTML.toLowerCase()
+            gKeywordSearchCountMap[keyword]++            
+            updateTagsSize()
         })
     })
+
+    function updateTagsSize() {
+        gElTags.forEach((tagEl) => {
+            let tag = tagEl.innerHTML.toLowerCase()
+            
+                tagEl.style.fontSize = `${gKeywordSearchCountMap[tag] * 4}px` 
+                console.log('hi')
+
+        })
+    }

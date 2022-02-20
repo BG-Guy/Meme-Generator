@@ -79,6 +79,7 @@ function setLineTxt(txt) {
     var line = gMeme.lines[gMeme.selectedLineIdx]
     if (!txt.trim()) return
     line.xCoord = getTextCoordX(txt)
+    if (!line.xCoord) return
     line.txt = txt
     renderMeme()
     
@@ -248,4 +249,10 @@ function isDrag() {
 function setLineToFocus(line,idx) {
     gElLineInput.value = line.txt
     gMeme.selectedLineIdx = idx
+}
+
+function removeLine() {
+    let idx = gMeme.selectedLineIdx
+    gMeme.lines.splice(idx, 1)
+    renderMeme()
 }
